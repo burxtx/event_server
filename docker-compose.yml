@@ -1,0 +1,18 @@
+version: "3"
+services: 
+  web: 
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+  redis:
+    image: "redis:alpine"
+    
+  postgres:
+    build: "./postgres"
+    restart: "always"
+    environment:
+      POSTGRES_DB: "root"
+      POSTGRES_USER: "car"
+      POSTGRES_PASSWORD: "123456"
