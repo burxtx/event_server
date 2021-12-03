@@ -16,7 +16,7 @@ func TestRocketProducer(t *testing.T) {
 		AK:         AK,
 		SK:         SK,
 	}
-	producer, err := NewRocketProducer(ProducerConfig{cfg})
+	producer, err := NewProducer(ProducerConfig{cfg})
 	if err != nil {
 		t.Errorf(err.Error())
 	}
@@ -26,17 +26,17 @@ func TestRocketProducer(t *testing.T) {
 	}
 }
 
-func TestRocketConsumer(t *testing.T) {
-	cfg := Config{Nameserver: []string{Nameserver},
-		AK: AK,
-		SK: SK,
-	}
-	producer, err := NewRocketConsumer(ConsumerConfig{cfg})
-	if err != nil {
-		t.Errorf(err.Error())
-	}
-	err = producer.Subscribe(context.Background(), TOPIC)
-	if err != nil {
-		t.Errorf(err.Error())
-	}
-}
+// func TestRocketConsumer(t *testing.T) {
+// 	cfg := Config{Nameserver: []string{Nameserver},
+// 		AK: AK,
+// 		SK: SK,
+// 	}
+// 	consumer, err := NewConsumer(ConsumerConfig{cfg})
+// 	if err != nil {
+// 		t.Errorf(err.Error())
+// 	}
+// 	err = consumer.Listen(context.Background(), TOPIC, )
+// 	if err != nil {
+// 		t.Errorf(err.Error())
+// 	}
+// }

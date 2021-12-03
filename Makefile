@@ -1,4 +1,4 @@
-APP=car-user
+APP=APP
 ARCH?=amd64
 REGISTRY?=
 GIT_COMMIT:=$(shell git rev-parse --short HEAD)

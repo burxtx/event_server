@@ -6,6 +6,6 @@ import (
 	"github.com/google/uuid"
 )
 
-func NewHostID() string {
+func NewEventID() string {
 	return strings.Replace(uuid.New().String(), "-", "", -1)
 }

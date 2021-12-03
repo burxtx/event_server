@@ -1,5 +1,5 @@
 db:
-  host: root:passwd@tcp(localhost:3306)/car_user
+  host: root:passwd@tcp(localhost:3306)/event_server
   max_idle_conns: 2
   conn_max_lifetime: 3
   max_open_conns: 0
@@ -19,6 +19,6 @@ redis:
 
 log:
   format: "string" # string or json
-  path: "/home/work/log/car"
-  output: "/home/work/log/car/auth.log" # log path, or console: stdout, stderr
+  path: "/home/work/log/event_server"
+  output: "/home/work/log/event_server/auth.log" # log path, or console: stdout, stderr
   level: "debug"
